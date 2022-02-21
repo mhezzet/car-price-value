@@ -3,9 +3,8 @@ POST http://localhost:4000/auth/sign-up
 Content-Type: application/json
 
 {
-  "email":"as221@asd.com",
-  "password":"123",
-  "password2":"123"
+  "email":"asd@asd.com",
+  "password":"123"
 }
 
 
@@ -14,7 +13,7 @@ POST http://localhost:4000/auth/sign-in
 Content-Type: application/json
 
 {
-  "email":"asd441@asd.com",
+  "email":"asd@asd.com",
   "password":"123"
 }
 
@@ -28,7 +27,7 @@ POST  http://localhost:4000/auth/sign-out
 
 
 ### find a particular user with a given id
-GET http://localhost:4000/auth/2
+GET http://localhost:4000/auth/1
 
 
 ### find all users with this email

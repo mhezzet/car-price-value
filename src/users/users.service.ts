@@ -20,6 +20,8 @@ export class UsersService {
 
     const user = await this.repo.findOne(id);
 
+    console.log('service user ', user);
+
     if (!user) {
       throw new NotFoundException('user not found');
     }

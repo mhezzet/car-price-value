@@ -1,13 +1,26 @@
+### create report
 POST http://localhost:4000/reports
 Content-Type: application/json
 
 {
-  "price":500,
+  "price":5031,
   "make":"bmw",
-  "model":"x6",
-  "year":1970,
-  "mileage":10000,
-  "lat":"41.40338",
-  "lng":"2.17403"
-
+  "model":"corolla",
+  "year":1980,
+  "mileage":20000,
+  "lat":"0",
+  "lng":"0",
+  "approved":true
 }
+
+### update a report
+PATCH http://localhost:4000/reports/1
+Content-Type: application/json
+
+{
+  "approved":true
+}
+
+### get estimate
+GET http://localhost:4000/reports?make=bmw&model=corolla&lng=0&lat=0&mileage=20000&year=1980
+Content-Type: application/json
