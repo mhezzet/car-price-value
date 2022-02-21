@@ -14,9 +14,12 @@ const cookieSession = require('cookie-session');
     UsersModule,
     ReportsModule,
     TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database:
-        process.env.NODE_ENV === 'development' ? 'db.sqlite' : 'test.sqlite',
+      type: 'postgres',
+      host: 'postgres',
+      port: 5432,
+      database: process.env.DB_DATABASE_NAME,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       entities: [User, Report],
       synchronize: true,
     }),

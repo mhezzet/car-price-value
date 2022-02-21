@@ -27,7 +27,6 @@ export class ReportsController {
   @UseGuards(AuthGuard)
   @Serialize(ReportDto)
   createReport(@Body() body: CreateReportDto, @CurrentUser() user: User) {
-    console.log('currentUser', user);
     return this.reportService.create(body, user);
   }
 
